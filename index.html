@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suhat's Recommended Books</title>
+
+  <style>
+    /* Base Styling, pretty common but meh, it's for the best */
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #0a0a0a;
+      /* Background Image Setup */
+      background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background-color: rgba(20, 20, 20, 0.85);
+      padding: 40px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Headings */
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      font-size: 2.2rem;
+      margin-top: 0;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 15px;
+    }
+
+    h2 {
+      color: #c9a45c; /* A muted gold for a mystical touch, heh, perfect for my book recomendations */
+      font-size: 1.4rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    /* Text Paragraphs */
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    /* Book Links for the CHOSEN ONE~ */
+    .book-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .book-card {
+      display: block;
+      text-decoration: none;
+      background-color: rgba(40, 40, 40, 0.7);
+      color: #e0e0e0;
+      padding: 20px;
+      border-left: 4px solid #c9a45c;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .book-card:hover {
+      background-color: rgba(60, 60, 60, 0.9);
+      transform: translateX(10px); /* The playful movement */
+      border-left: 4px solid #ffffff;
+      color: #ffffff;
+    }
+
+    .book-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .book-author {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #aaa;
+    }
+    
+    .book-card:hover .book-author {
+      color: #ddd;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      letter-spacing: 0.5px;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Suhat's Recommended Books</h1>
+
+    <!-- Section 1: Context -->
+    <h2>What's the page for?</h2>
+    <p>Before going into this, one must first have to get used to a very arduous form of asceticism at a young age. It must become a part and parcel of you, similar to that of breathing. Lest you become a heaping mess if you try to assimilate these books into your psyche without having the disciplines to hold it. Lastly, it will not be assimilated if you already have a foundation of your own.</p>
+
+    <!-- Section 2: Links -->
+    <h2>The Recommended Books</h2>
+    <div class="book-links">
+      
+      <!-- Book 1 -->
+      <a href="https://www.gmbinder.com/share/-ONP1SWOO659P66XSnP3" target="_blank" class="book-card">
+        <span class="book-title">The Trouble with Being Born</span>
+        <span class="book-author">by Emil Cioran</span>
+      </a>
+
+      <!-- Book 2 -->
+      <a href="https://share.google/PPzZqR6br7goUvqqE" target="_blank" class="book-card">
+        <span class="book-title">The Wisdom of Insecurity</span>
+        <span class="book-author">by Alan Watts</span>
+      </a>
+
+      <!-- Book 3 -->
+      <a href="https://online.fliphtml5.com/horqh/lqla/#p=14" target="_blank" class="book-card">
+        <span class="book-title">Become What You Are</span>
+        <span class="book-author">by Alan Watts</span>
+      </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      Made by Garth Kelly A. Suhat, BSCS 1 - BLK 1
+    </footer>
+  </div>
+
+</body>
+</html>
