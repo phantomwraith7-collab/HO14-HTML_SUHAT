@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Suhat’s recommended books, with student information.">
   <title>Suhat's Recommended Books</title>
 
   <style>
-    /* Base Styling, pretty common but meh, it's for the best */
+    html { scroll-behavior: smooth; }
+
     body {
       font-family: "Times New Roman", Times, serif;
       background-color: #0a0a0a;
-      /* Background Image Setup */
-      background-image: url('background.jpg');
+      background-image: linear-gradient(rgba(10, 10, 10, 0.25), rgba(10, 10, 10, 0.4)), url('background.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: scroll;
@@ -25,37 +26,56 @@
       box-sizing: border-box;
     }
 
-    /* Main Container */
     .container {
       max-width: 700px;
       width: 100%;
-      background-color: rgba(20, 20, 20, 0.85);
+      background-color: rgba(20, 20, 20, 0.88);
       padding: 40px;
       border-radius: 8px;
       border: 1px solid #333;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     }
 
-    /* Headings */
     h1 {
       color: #ffffff;
       text-align: center;
       font-size: 2.2rem;
-      margin-top: 0;
-      margin-bottom: 30px;
+      margin: 0 0 15px;
       letter-spacing: 1px;
-      border-bottom: 1px solid #444;
-      padding-bottom: 15px;
+    }
+
+    header { border-bottom: 1px solid #444; padding-bottom: 15px; }
+
+    /* Navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 22px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #c9a45c;
+      text-decoration: none;
+      font-size: 1.05rem;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+    }
+    nav a:hover, nav a:focus {
+      color: #ffffff;
+      border-bottom-color: #ffffff;
     }
 
     h2 {
-      color: #c9a45c; /* A muted gold for a mystical touch, heh, perfect for my book recomendations */
+      color: #c9a45c;
       font-size: 1.4rem;
       margin-top: 30px;
       margin-bottom: 15px;
+      scroll-margin-top: 20px;
     }
 
-    /* Text Paragraphs */
     p {
       font-size: 1.1rem;
       line-height: 1.6;
@@ -63,50 +83,88 @@
       text-align: justify;
     }
 
-    /* Book Links for the CHOSEN ONE~ */
-    .book-links {
+    /* Student info */
+    .student-card {
       display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .book-card {
-      display: block;
-      text-decoration: none;
+      align-items: center;
+      gap: 20px;
       background-color: rgba(40, 40, 40, 0.7);
-      color: #e0e0e0;
-      padding: 20px;
       border-left: 4px solid #c9a45c;
       border-radius: 4px;
-      transition: all 0.3s ease;
+      padding: 20px;
     }
-
-    .book-card:hover {
-      background-color: rgba(60, 60, 60, 0.9);
-      transform: translateX(10px); /* The playful movement */
-      border-left: 4px solid #ffffff;
-      color: #ffffff;
+    .student-card img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #c9a45c;
+      flex-shrink: 0;
     }
+    dl.student {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 10px 20px;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    dl.student dt { color: #aaa; font-style: italic; }
+    dl.student dd { margin: 0; color: #fff; }
 
-    .book-title {
-      font-size: 1.2rem;
-      font-weight: bold;
+    /* Bullet list */
+    ul.page-list {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0 0 20px;
+      padding-left: 25px;
+    }
+    ul.page-list li { margin-bottom: 8px; }
+    ul.page-list li::marker { color: #c9a45c; }
+    strong { color: #fff; }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.05rem;
+    }
+    caption {
+      text-align: left;
+      color: #aaa;
+      font-style: italic;
+      padding-bottom: 8px;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th { background-color: rgba(201, 164, 92, 0.18); color: #fff; }
+    td a { color: #c9a45c; }
+    td a:hover { color: #fff; }
+
+    /* Image */
+    figure { margin: 0; }
+    figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #333;
       display: block;
-      margin-bottom: 5px;
     }
-
-    .book-author {
+    figcaption {
       font-size: 0.95rem;
       font-style: italic;
       color: #aaa;
-    }
-    
-    .book-card:hover .book-author {
-      color: #ddd;
+      text-align: center;
+      margin-top: 8px;
     }
 
-    /* Footer */
+    .top-link { text-align: right; margin: 20px 0 0; }
+    .top-link a { color: #888; text-decoration: none; font-size: 0.95rem; }
+    .top-link a:hover { color: #fff; }
+
     footer {
       margin-top: 40px;
       padding-top: 20px;
@@ -117,54 +175,115 @@
       letter-spacing: 0.5px;
     }
 
-    /* Mobile Adjustments */
     @media (max-width: 600px) {
-      .container {
-        padding: 25px;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      p {
-        font-size: 1rem;
-      }
+      .container { padding: 25px; }
+      h1 { font-size: 1.8rem; }
+      p, ul.page-list { font-size: 1rem; }
+      .student-card { flex-direction: column; text-align: center; }
+      dl.student { grid-template-columns: 1fr; gap: 2px; text-align: center; }
+      dl.student dd { margin-bottom: 10px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Suhat's Recommended Books</h1>
+  <div class="container" id="top">
 
-    <!-- Section 1: Context -->
-    <h2>What's the page for?</h2>
-    <p>Before going into this, one must first have to get used to a very arduous form of asceticism at a young age. It must become a part and parcel of you, similar to that of breathing. Lest you become a heaping mess if you try to assimilate these books into your psyche without having the disciplines to hold it. Lastly, it will not be assimilated if you already have a foundation of your own.</p>
+    <header>
+      <h1>Suhat’s Recommended Books</h1>
+      <nav aria-label="Page sections">
+        <ul>
+          <li><a href="#info">Student Info</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#table">Book Table</a></li>
+          <li><a href="#artwork">Artwork</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Section 2: Links -->
-    <h2>The Recommended Books</h2>
-    <div class="book-links">
-      
-      <!-- Book 1 -->
-      <a href="https://www.gmbinder.com/share/-ONP1SWOO659P66XSnP3" target="_blank" class="book-card">
-        <span class="book-title">The Trouble with Being Born</span>
-        <span class="book-author">by Emil Cioran</span>
-      </a>
+    <main>
 
-      <!-- Book 2 -->
-      <a href="https://share.google/PPzZqR6br7goUvqqE" target="_blank" class="book-card">
-        <span class="book-title">The Wisdom of Insecurity</span>
-        <span class="book-author">by Alan Watts</span>
-      </a>
+      <!-- Student information -->
+      <section id="info">
+        <h2>Student Information</h2>
+        <div class="student-card">
+          <img src="student.jpg" alt="Portrait photo of Garth Kelly A. Suhat">
+          <dl class="student">
+            <dt>Name</dt>
+            <dd>Garth Kelly A. Suhat</dd>
+            <dt>Age</dt>
+            <dd>18 years old</dd>
+            <dt>Course</dt>
+            <dd>BSCS 1</dd>
+            <dt>Block</dt>
+            <dd>Blk 1</dd>
+          </dl>
+        </div>
+      </section>
 
-      <!-- Book 3 -->
-      <a href="https://online.fliphtml5.com/horqh/lqla/#p=14" target="_blank" class="book-card">
-        <span class="book-title">Become What You Are</span>
-        <span class="book-author">by Alan Watts</span>
-      </a>
+      <!-- Context -->
+      <section id="about">
+        <h2>What’s the page for?</h2>
+        <p>Before going into this, one must first have to get used to a very <strong>arduous form of asceticism</strong> at a young age. It must become a part and parcel of you, similar to that of breathing. Lest you become a heaping mess if you try to assimilate these books into your psyche without having the disciplines to hold it. Lastly, it will not be assimilated if you already have <em>a foundation of your own</em>.</p>
 
-    </div>
+        <p><strong>On this page:</strong></p>
+        <ul class="page-list">
+          <li><strong>Student Information:</strong> who made this page</li>
+          <li><strong>Book Table:</strong> the recommended books, their authors, and links</li>
+          <li><strong>Artwork:</strong> the image used as the page background</li>
+        </ul>
+      </section>
 
-    <!-- Footer -->
+      <!-- Table -->
+      <section id="table">
+        <h2>Book Table</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Summary of the recommended books</caption>
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>The Trouble with Being Born</td>
+                <td>Emil Cioran</td>
+                <td><a href="https://www.gmbinder.com/share/-ONP1SWOO659P66XSnP3" target="_blank" rel="noopener">Read</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>The Wisdom of Insecurity</td>
+                <td>Alan Watts</td>
+                <td><a href="https://share.google/PPzZqR6br7goUvqqE" target="_blank" rel="noopener">Read</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Become What You Are</td>
+                <td>Alan Watts</td>
+                <td><a href="https://online.fliphtml5.com/horqh/lqla/#p=14" target="_blank" rel="noopener">Read</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Image -->
+      <section id="artwork">
+        <h2>Artwork</h2>
+        <figure>
+          <img src="background.jpg" alt="Painting of a veiled figure in dark robes reclining on a patterned cushion, with a starry night sky where the face should be, against a rocky landscape.">
+          <figcaption>The page’s background artwork</figcaption>
+        </figure>
+      </section>
+
+      <p class="top-link"><a href="#top">Back to top ↑</a></p>
+    </main>
+
     <footer>
       Made by Garth Kelly A. Suhat, BSCS 1 - BLK 1
     </footer>
