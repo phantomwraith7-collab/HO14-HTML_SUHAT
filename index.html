@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Suhat’s recommended books, with student information.">
-  <title>Suhat's Recommended Books</title>
+  <meta name="description" content="Personal webpage of Garth Kelly A. Suhat, BSCS 1.">
+  <title>Garth Suhat | Personal Webpage</title>
 
   <style>
     html { scroll-behavior: smooth; }
@@ -140,30 +140,20 @@
       padding: 10px 12px;
       text-align: left;
     }
-    th { background-color: rgba(201, 164, 92, 0.18); color: #fff; }
     td a { color: #c9a45c; }
     td a:hover { color: #fff; }
+    th { background-color: rgba(201, 164, 92, 0.18); color: #fff; }
 
-    /* Image */
-    figure { margin: 0; }
-    figure img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      border: 1px solid #333;
-      display: block;
-    }
-    figcaption {
-      font-size: 0.95rem;
+    .tagline {
+      text-align: center;
       font-style: italic;
       color: #aaa;
-      text-align: center;
-      margin-top: 8px;
+      margin: -5px 0 15px;
+      font-size: 1.05rem;
     }
 
-    .top-link { text-align: right; margin: 20px 0 0; }
-    .top-link a { color: #888; text-decoration: none; font-size: 0.95rem; }
-    .top-link a:hover { color: #fff; }
+    ul.page-list a { color: #c9a45c; }
+    ul.page-list a:hover { color: #fff; }
 
     footer {
       margin-top: 40px;
@@ -190,18 +180,38 @@
   <div class="container" id="top">
 
     <header>
-      <h1>Suhat’s Recommended Books</h1>
+      <h1>Garth Suhat</h1>
+      <p class="tagline">My Personal Webpage</p>
       <nav aria-label="Page sections">
         <ul>
+          <li><a href="#about">About Me</a></li>
           <li><a href="#info">Student Info</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#table">Book Table</a></li>
-          <li><a href="#artwork">Artwork</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#goals">Goals</a></li>
+          <li><a href="#books">Books</a></li>
+          <li><a href="#learning">Learning</a></li>
+          <li><a href="#links">Links</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+
+      <!-- About -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I’m <strong>Garth Kelly A. Suhat</strong>, an 18-year-old <em>BSCS 1</em> student from Block 1. Welcome to my personal webpage, which I built for my HTML activity.</p>
+
+        <p><strong>On this page:</strong></p>
+        <ul class="page-list">
+          <li><strong>Student Information:</strong> my photo and basic details</li>
+          <li><strong>Hobbies, Interests, and Goals:</strong> what I enjoy and what I aim for</li>
+          <li><strong>Books I Recommend:</strong> my three picks, with links</li>
+          <li><strong>What I’m Learning:</strong> a quick table of what I’m working on</li>
+          <li><strong>Links:</strong> where to find the source code of this page</li>
+        </ul>
+      </section>
 
       <!-- Student information -->
       <section id="info">
@@ -217,29 +227,54 @@
             <dd>BSCS 1</dd>
             <dt>Block</dt>
             <dd>Blk 1</dd>
+            <dt>Status</dt>
+            <dd>Married to myself</dd>
+            <dt>Location</dt>
+            <dd>Wherever the world is; for I am my world.</dd>
           </dl>
         </div>
       </section>
 
-      <!-- Context -->
-      <section id="about">
-        <h2>What’s the page for?</h2>
-        <p>Before going into this, one must first have to get used to a very <strong>arduous form of asceticism</strong> at a young age. It must become a part and parcel of you, similar to that of breathing. Lest you become a heaping mess if you try to assimilate these books into your psyche without having the disciplines to hold it. Lastly, it will not be assimilated if you already have <em>a foundation of your own</em>.</p>
-
-        <p><strong>On this page:</strong></p>
+      <!-- Hobbies -->
+      <section id="hobbies">
+        <h2>My Hobbies</h2>
         <ul class="page-list">
-          <li><strong>Student Information:</strong> who made this page</li>
-          <li><strong>Book Table:</strong> the recommended books, their authors, and links</li>
-          <li><strong>Artwork:</strong> the image used as the page background</li>
+          <li>Reading</li>
+          <li>Poetry</li>
+          <li>Learning the mundane</li>
+          <li>Listening to music</li>
+          <li>Doing well whatever I think of</li>
         </ul>
       </section>
 
-      <!-- Table -->
-      <section id="table">
-        <h2>Book Table</h2>
+      <!-- Interests -->
+      <section id="interests">
+        <h2>My Interests</h2>
+        <ul class="page-list">
+          <li>Self-mastery</li>
+          <li>Perseverance</li>
+          <li>Life and death</li>
+          <li>Death of the ego</li>
+          <li>Transcending consciousness</li>
+          <li>Perceiving reality</li>
+          <li>Manifestation of ideas through amalgamations</li>
+          <li>Creation of personas</li>
+        </ul>
+      </section>
+
+      <!-- Goals -->
+      <section id="goals">
+        <h2>My Goals</h2>
+        <p>To spend my time and execute my every decision <em>well</em>.</p>
+      </section>
+
+      <!-- Books -->
+      <section id="books">
+        <h2>Books I Recommend</h2>
+        <p>Before going into this, one must first have to get used to a very <strong>arduous form of asceticism</strong> at a young age. It must become a part and parcel of you, similar to that of breathing. Lest you become a heaping mess if you try to assimilate these books into your psyche without having the disciplines to hold it. Lastly, it will not be assimilated if you already have <em>a foundation of your own</em>.</p>
         <div class="table-wrap">
           <table>
-            <caption>Summary of the recommended books</caption>
+            <caption>The three books I recommend</caption>
             <thead>
               <tr>
                 <th scope="col">No.</th>
@@ -272,16 +307,49 @@
         </div>
       </section>
 
-      <!-- Image -->
-      <section id="artwork">
-        <h2>Artwork</h2>
-        <figure>
-          <img src="background.jpg" alt="Painting of a veiled figure in dark robes reclining on a patterned cushion, with a starry night sky where the face should be, against a rocky landscape.">
-          <figcaption>The page’s background artwork</figcaption>
-        </figure>
+      <!-- Table -->
+      <section id="learning">
+        <h2>What I’m Learning</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>A quick overview of my current work</caption>
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Topic</th>
+                <th scope="col">What I’m doing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Computer Science</td>
+                <td>Studying BSCS 1, Block 1</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>HTML5</td>
+                <td>Building this personal webpage</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Web Hosting</td>
+                <td>Publishing the page for free on GitHub Pages</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <p class="top-link"><a href="#top">Back to top ↑</a></p>
+      <!-- Links -->
+      <section id="links">
+        <h2>Links</h2>
+        <ul class="page-list">
+          <li><a href="https://github.com/phantomwraith7-collab/HO14-HTML_SUHAT" target="_blank" rel="noopener">View the source code of this page on GitHub</a></li>
+          <li><a href="#top">Back to the top of the page</a></li>
+        </ul>
+      </section>
+
     </main>
 
     <footer>
